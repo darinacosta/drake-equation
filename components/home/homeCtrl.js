@@ -1,11 +1,14 @@
 app.controller('homeCtrl', ['$scope','drakeCalculator', homeCtrl]);
 
 function homeCtrl($scope, drakeCalculator) {
+  String.prototype.repeat = function( num ) {
+      return new Array( num + 1 ).join( this );
+  };
 	var s = $scope;
   s.r = 0;
-  $scope.$watchCollection('[r]', function(newValues){
+  $scope.$watchCollection('[r, fp, ne, fl, fi, fc, l]', function(newValues){
     var calculation = drakeCalculator.n(s.r, s.fp, s.ne, s.fl, s.fi, s.fc, s.l);
-    s.n = isNaN(calculation) ? 'Awaiting inputs.' : calculation;
+    s.n = isNaN(calculation) ? 'Awaiting inputs.' : '<img src="assets/i/space_invader_a_v1.png"> '.repeat(calculation);
   });
 }
 

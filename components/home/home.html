@@ -1,11 +1,23 @@
 <form novalidate>
-  R: <input type="number" ng-model="r"><br>  
-  f<sub>p</sub>: <input type="number" ng-model="fp"><br> 
-  n<sub>e</sub>: <input type="number" ng-model="ne"><br> 
-  f<sub>l</sub>: <input type="number" ng-model="fl"><br> 
-  f<sub>i</sub>: <input type="number" ng-model="fi"><br>  
-  f<sub>c</sub>: <input type="number" ng-model="fc"><br>  
-  L: <input type="number" ng-model="l"><br>
-  N: {{n}}
-
+  Rate at which stars form (R):<br>
+  <input type="number" ng-model="r"><br> 
+  Fraction of stars that have planetary systems (f<sub>p</sub>):<br> 
+  <input type="number" ng-model="fp"><br> 
+  Number of planets, per planetary system, that are suitable for life (n<sub>e</sub>):<br> 
+  <input type="number" ng-model="ne"><br> 
+  Fraction of planets suitable for life on which life actually arises (f<sub>l</sub>):<br> 
+  <input type="number" ng-model="fl"><br> 
+  Fraction of life-bearing planets where intelligence develops (f<sub>i</sub>):<br> 
+  <input type="number" ng-model="fi"><br>  
+    Fraction of planets with intelligent life that develop a technological
+    phase during which there is capability for and interest in interstellar
+    communication (f<sub>c</sub>):
+  <br> 
+  <input type="number" ng-model="fc"><br>  
+  Average lifetime of communicable civilizations (L):<br>
+  <input type="number" ng-model="l"><br>
+  <hr>
+  Number of broadcasting civilizations in our galaxy (N):<br> 
+  <string ng-bind-html="n"></string>
 </form>
+

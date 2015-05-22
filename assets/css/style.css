@@ -1,0 +1,8 @@
+input[type=text], input[type=url], input[type=email], input[type=password], input[type=number] {
+  -webkit-appearance: none; -moz-appearance: none;
+  display: block;
+  margin: 0;
+  width: 300px; height: 40px;
+  line-height: 40px; font-size: 17px;
+  border: 1px solid #bbb;
+}
